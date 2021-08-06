@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+img {
+    border: none;
+}
+
+.container {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+#header .head {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+#header .head .logo img {
+    margin-right: 10px;
+    width: 30px;
+}
+
+#header .head .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #134660, #1e90ff);
+}
+
+#header .head .logo .logo-title{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #2d76be;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 12px;
+}
+
+#header .head .nav ul {
+    display: flex;
+}
+
+#header .nav li a {
+    width: 100px;
+    padding: 5px 0;
+    display: block;
+    border-radius: 4px;
+}
+
+#header .nav li {
+    padding: 0 10px;
+    text-align: center;
+    font-weight: 700;
+    margin-right: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+#header .nav li.active {
+    border-bottom-color: #0078d4;
+}
+
+#login {
+    width: 100px;
+}
+
+#login a {
+    background-color: #244362;
+    color: #fff;
+}
+
+.banner {
+    weight: 100%;
+    height: 500px;
+    background: url('../images/banner-bg.png') no-repeat;
+    background-size:100% 100%;
+    background-origin:content-box;
+}
+
+.banner .info {
+    position: absolute;
+    left: 100px;
+    top: 25%;
+    text-align: center;
+}
+
+.banner .info h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(50,49,48,.9);
+}
+
+.banner .info h1 {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #134660, #1e90ff);
+}
+
+.banner .info p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6e6d6b;
+    line-height: 2;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #3271ba;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+#header .nav li.login:hover,
+.btn:hover {
+    opacity: .9;
+    color: #fff;
+}
+
+.banner .info .btn {
+    margin-top: 1em;
+    padding: 5px 50px;
+}
+
+#main .title h2 {
+    color: #3999fb;
+    font-size: 16px;
+    line-height: 2;
+    padding-bottom: 1em;
+    width: 200px;
+    text-align: center;
+    background: url(../images/title.png) no-repeat center bottom;
+    background-size: auto 16px;
+}
+
+#main .section {
+    padding: 50px 0;
+}
+
+#main .section .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#main .section .content {
+    padding-top: 50px;
+}
+
+.media {
+    display: flex;
+    font-weight: 700;
+    width: 450px;
+}
+
+.media .media-left {
+    margin-right: 1em;
+}
+
+.media .media-title {
+    font-size: 12px;
+    color: #144c71;
+    line-height: 2;
+}
+
+.media .media-body p {
+    line-height: 2;
+}
+
+.media .media-body p a {
+    font-size: 14px;
+    color: #749dc2;
+}
+
+.news .container {
+    background: url(../images/news-bg.png) no-repeat right center;
+    background-size: auto 100%;
+}
+
+#main .about .container {
+    align-items: flex-end;
+}
+
+.about .media {
+    margin-left: 55px;
+}
+
+.about .media p {
+    font-size: 16px;
+    font-weight: 350;
+    line-height: 3;
+    text-align: center;
+}
+
+.about .container {
+    background: url('../images/info.png') no-repeat left center;
+    background-size: 220px;
+}
+
+.skill .container {
+    background: url(../images/skill.png) no-repeat right center;
+    background-size: 220px;
+}
+
+.skill .animated {
+    width: 600px;
+    position: relative;
+}
+
+.skill .animated img {
+    width: 100%;
+}
+
+.skill .animated .a1 {
+    position: absolute;
+    width: 100px;
+    left: 180px;
+}
+
+.skill .animated .a2 {
+    position: absolute;
+    width: 60px;
+    left: 240px;
+    top: 200px
+}
+
+.skill .animated .a3 {
+    position: absolute;
+    width: 60px;
+    left: 380px;
+    top: 120px
+}
+
+.skill .animated:hover .a1,
+.skill .animated:hover .a2,
+.skill .animated:hover .a3 {
+    animation: move 3s infinite;
+}
+
+.skill .animated:hover .a2 {
+    animation-delay: 1s;
+}
+
+.skill .animated:hover .a3 {
+    animation-delay: 2s;
+}
+
+#main .activity .container {
+    display: block;
+}
+
+.activity .swiper-container {
+    border-radius: 10px;
+}
+
+.activity img {
+    width: 100%;
+}
+
+.section .text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 3;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #134660, #1e90ff);
+}
+
+#footer {
+    background-color: #1a3249;
+    padding: 50px 0;
+    color: #aaa;
+}
+
+#footer .link {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+#footer .logo img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#footer dt {
+    color: #ddd;
+    font-weight: 700;
+    line-height: 2;
+}
+
+#footer a {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 2;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+    50% {
+        transform: translateX(20px) translateY(20px);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+#photo > img {
+    float: left;
+    width: 400px;
+    height: 300px;
+}
+
+@keyframes switch {
+    0%,
+    25% {
+        margin-left: 0;
+    }
+    35%,
+    60% {
+        margin-left: -400px;
+    }
+    70%,
+    100% {
+        margin-left: -800px;
+    }
+}
+
+
+
